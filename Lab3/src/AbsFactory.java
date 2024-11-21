@@ -1,9 +1,9 @@
-// Интерфейс для продукта A
+
 interface Button {
     void paint();
 }
 
-// Конкретный продукт A1
+
 class WindowsButton implements Button {
     @Override
     public void paint() {
@@ -11,7 +11,7 @@ class WindowsButton implements Button {
     }
 }
 
-// Конкретный продукт A2
+
 class MacButton implements Button {
     @Override
     public void paint() {
@@ -19,12 +19,12 @@ class MacButton implements Button {
     }
 }
 
-// Интерфейс для продукта B
+
 interface Checkbox {
     void paint();
 }
 
-// Конкретный продукт B1
+
 class WindowsCheckbox implements Checkbox {
     @Override
     public void paint() {
@@ -32,7 +32,7 @@ class WindowsCheckbox implements Checkbox {
     }
 }
 
-// Конкретный продукт B2
+
 class MacCheckbox implements Checkbox {
     @Override
     public void paint() {
@@ -40,13 +40,12 @@ class MacCheckbox implements Checkbox {
     }
 }
 
-// Интерфейс абстрактной фабрики
 interface GUIFactory {
     Button createButton();
     Checkbox createCheckbox();
 }
 
-// Конкретная фабрика 1
+
 class WindowsFactory implements GUIFactory {
     @Override
     public Button createButton() {
@@ -59,7 +58,7 @@ class WindowsFactory implements GUIFactory {
     }
 }
 
-// Конкретная фабрика 2
+
 class MacFactory implements GUIFactory {
     @Override
     public Button createButton() {
@@ -87,7 +86,6 @@ class Application {
         checkbox.paint();
     }
 }
-
 
 public class AbsFactory {
     public static void main(String[] args) {
